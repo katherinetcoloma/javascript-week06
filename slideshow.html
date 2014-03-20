@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,20 +7,10 @@
         <img id="image" src="images/1.jpg" alt="">
         <script src="jquery-1.11.0.js"></script>
         <script>
-        
-        var position = 1;
-        var maxPosition = 4;
-        
-        function nextImage() {
-            position++;
-            if (position > maxPosition) {
-                position = 1;
-            }
-            $('#image').fadeOut(250, function() {
-                $('#image').attr('src', 'images/' + position + '.jpg');
-                $('#image').fadeIn(250);
-            });
-        }
+
+        </script>
+    </body>
+</html>
         
         $('#image').click(nextImage);
         
