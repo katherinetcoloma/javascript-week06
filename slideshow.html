@@ -5,13 +5,27 @@
         <title>Slideshow</title>
     </head>
     <body>
+    <h1>Slideshows of Photos</h1>
         <img id="image" src="images/1.jpg" alt="">
         <script src="jquery-1.11.0.js"></script>
         <script>
-        $('#image').click(function() {
-    console.log('hi');
-});
-
+        
+        var position = 1;
+        var maxPosition = 7;
+        
+        function nextImage() {
+            position++;
+            if (position > maxPosition) {
+                position = 1;
+            }
+            $('#image').fadeOut(250, function() {
+                $('#image').attr('src', 'images/' + position + '.jpg');
+                $('#image').fadeIn(250);
+            });
+        }
+        
+        $('#image').click(nextImage);
+        
         </script>
     </body>
 </html>
